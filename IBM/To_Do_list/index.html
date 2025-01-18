@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        /* Styles the main container of the to-do list */
+        .todo-container {
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        /* Removes default list styling for the to-do list */
+        .todo-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        /* Styles each list item in the to-do list */
+        li {
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Adds spacing for buttons in list items */
+        button {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="todo-container">
+    <h1>To-Do List</h1>
+
+    <!-- Input field to add new tasks -->
+    <input type="text" id="taskInput" placeholder="Add a new task">
+    
+    <!-- Button to add a new task to the list -->
+    <button class="add-btn" onclick="addTask()">Add Task</button>
+    
+    <!-- Unordered list to display the tasks -->
+    <ul class="todo-list" id="todoList"></ul>
+</div>
+
+<script>
+    // Placeholder for functionality to be added in future exercises
+    function addTask(){
+        const input = document.getElementById('taskInput');
+
+        const taskText = input.value.trim();
+
+        if(taskText !== ""){
+            const list = document.getElementById('todoList');
+
+            const li = document.createElement("li");
+
+            const span = document.createElement("span");
+            span.textContent = taskText;
+
+            var b1 = document.createElement("button");
+            b1.textContent = "Edit";
+            b1.onClick = () => editTask(span);
+
+            var b2 = document.createElement("button");
+            b2.textContent = "Delete";
+            b2.onClick = () => deleteTask(li);
+
+            li.appendChild(span);
+            li.appendChild(b1);
+            li.appendChild(b2);
+
+            list.appendChild(li);
+
+            input.value = "";
+        } else {
+            alert("Favor inserir atividade válida!");
+        }
+    }
+
+    function editTask(span){
+        const newTask = prompt("Edit your task:", span.textContent);
+
+        if(newTask !== null && newTask.trim() !== ""){
+            span.textContent = newTask.trim();
+        }
+    }
+
+    function deleteTask(task){
+        const list = document.getElementById("todoList");
+        list.removeChild(task);
+    }
+</script>
+
+</body>
+</html>
