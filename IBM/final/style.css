@@ -112,6 +112,8 @@ h2 {
   height: fit-content;
   vertical-align: middle;
   margin: 5px;
+  
+  clip-path: polygon(0 10vh, 100% 10vh, 100% 65vh, 0 75vh);
 }
 
 /* Skills */

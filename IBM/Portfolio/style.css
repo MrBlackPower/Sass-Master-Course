@@ -1,14 +1,89 @@
+/* CSS Variables */
+:root {
+    --color-1: #007e94;
+    --color-2: #00b3aa;
+    --color-3: #5dcfd5;
+    --color-4: #b4e9e9;
+    --color-5: #f5f7f2;
+}
+
+/**/
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    font-family: "Roboto",sans-serif;
+body {
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.7;
-    color: #777;
+    color: var(--color-5);
     padding: 30px;
+    background: linear-gradient(to bottom, var(--color-2), var(--color-1));
+    background-position: top;
+    background-attachment: fixed;
+}
+
+#home {
+    background: linear-gradient(to right bottom, var(--color-3), var(--color-4));
+    text-align: center;
+    padding-bottom: 5cm;
+    margin-left:-1cm;
+    margin-right:-1cm;
+    margin-top:-1cm;
+    padding-top: 1cm;
+    height: 5mm;
+}
+
+#name {
+    font-size: 60px;
+    color: var(--color-5);
+    font-style: bold;
+    letter-spacing: -5px;
+    text-shadow: -1px -1px 0 var(--color-1), 1px -1px 0 var(--color-1), -1px 1px 0 var(--color-1), 1px 1px 0 var(--color-1);
+}
+
+.info {
+    flex-direction: column;
+    float: left;
+    padding-left: 2cm;
+    height: fit-content;
+}
+
+.contact_info {
+    display: flex;
+    font-style: italic;
+    align-items: center;
+    flex-direction: row;
+    letter-spacing: -1px;
+}
+
+.contact_info svg {
+    width: 25px;
+    margin-right: 10px;
+    float: left;
+}
+
+/** TopMenu **/
+.topdiv {
+    float: right;
+    padding-right: 1cm;
+    margin-top: 13vh;
+}
+
+.topmenu {
+    color: var(--color-5);
+    margin: 10px;
+    padding: 20px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.topmenu:hover {
+    color: var(--color-3);
+    font-weight: bolder;
+    text-decoration: underline;
 }
