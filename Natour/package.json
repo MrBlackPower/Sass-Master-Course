@@ -1,0 +1,17 @@
+{
+  "name": "lafora",
+  "version": "1.0.0",
+  "description": "Ecoturismo no vale do café.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Igor Pires",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.83.4"
+  },
+  "dependencies": {
+    "jquery": "^3.7.1"
+  }
+}
