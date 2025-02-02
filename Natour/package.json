@@ -4,6 +4,7 @@
   "description": "Ecoturismo no vale do café.",
   "main": "index.js",
   "scripts": {
+    "compile:sass": "sass sass/main.scss css/style.css -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Igor Pires",
@@ -12,6 +13,6 @@
     "sass": "^1.83.4"
   },
   "dependencies": {
-    "jquery": "^3.7.1"
+    "live-server": "^1.2.2"
   }
 }
