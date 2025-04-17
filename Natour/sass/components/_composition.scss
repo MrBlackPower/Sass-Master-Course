@@ -2,7 +2,7 @@
     position: relative;
 
     &__photo{
-        width: 55%;
+        width: 40%;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
         border: .2rem;
         position: absolute;
@@ -11,19 +11,18 @@
         outline-offset: 2rem;
         
         &--p1{
-            left: 0;
+            left: 10%;
             top: -2rem;
-            transform: skewX();
         }
 
         &--p2{
-            right: 0;
+            right: 20%;
             top: 2rem;
         }
 
         &--p3{
-            left: 20%;
-            top: 10rem;
+            left: 25%;
+            top: 7rem;
         }
 
         &:hover {
