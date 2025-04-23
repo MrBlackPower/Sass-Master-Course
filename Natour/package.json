@@ -7,7 +7,8 @@
     "compile:sass": "sass sass/main.scss css/style.css -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Igor Pires",
+  "author": "Igor Pires dos Santos",
+  "email": "igor.pires.zweite@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "sass": "^1.83.4"

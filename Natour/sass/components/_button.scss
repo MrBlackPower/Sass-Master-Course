@@ -4,7 +4,7 @@
     text-decoration: none;
     padding: 15px 40px;
     display: inline-block;
-    border-radius: 100px;
+    border-radius: $border-radius-enormous;
     transition: all .2s;
     position: relative;
 }
@@ -40,12 +40,21 @@
         }
     }
 
+    &--green {
+        background-color: $color-primary;
+        color: $color-white;
+    
+        &::after {
+            color: $color-gray-dark;
+        }
+    }
+
     &::after {
         content: "";
         display: inline-block;
         height: 100%;
         width: 100%;
-        border-radius: 10rem;
+        border-radius: $border-radius-big;
         position: absolute;
         top: 0;
         left: 0;
