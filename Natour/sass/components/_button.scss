@@ -7,15 +7,20 @@
     border-radius: $border-radius-enormous;
     transition: all .2s;
     position: relative;
+
+    //Specific to the button component <button>
+    border: none;
+    cursor: pointer;
 }
 
 .btn{
+    &,
     &:link,
     &:visited {
         @extend %btn-placeholder;
     }
 
-    &:hover {
+    &:hover{
         transform: translateY(-3px);
         box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
 
@@ -25,7 +30,8 @@
         }
     }
     
-    &:active {
+    &:active,
+    &:focus {
         transform: translateY(-1px);
         box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
     }
