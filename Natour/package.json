@@ -11,7 +11,7 @@
   "email": "igor.pires.zweite@gmail.com",
   "license": "ISC",
   "devDependencies": {
-    "sass": "^1.83.4"
+    "sass": "^1.87.0"
   },
   "dependencies": {
     "live-server": "^1.2.2"

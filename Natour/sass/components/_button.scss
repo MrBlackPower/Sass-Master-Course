@@ -37,11 +37,11 @@
     }
 
     &--white {
-        background-color: lighten($color-white,10%);
+        background-color: adjust-color($color-white,$lightness:10%);
         color: $color-gray-dark;
     
         &::after {
-            background-color: lighten($color-white,10%);
+            background-color: adjust-color($color-white,$lightness:10%);
             color: $color-gray-dark;
         }
     }

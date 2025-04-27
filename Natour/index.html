@@ -31,6 +31,24 @@
     </header>
 
     <main>
+        <!-- NAVIGATION SECTION -->
+         <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+            <label for="navi-toggle" class="navigation__button">MENU</label>
+
+            <div class="navigation__background">&nbsp;</div>
+
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span>Sobre Lá Fora &trade;</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span>Seus Benefícios</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span>Tours populares</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>Histórias</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>05</span>Agende agora</a></li>
+                </ul>
+            </nav>
+         </div>
+        <!-- ABOUT SECTION -->
         <section class="section-about">
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">
@@ -57,7 +75,7 @@
                 </div>
             </div>
         </section>
-
+        <!-- FEATURES SECTION -->
         <section class="section-features">
             <i class="basic-world"></i>
 
@@ -107,6 +125,7 @@
                 </div>
             </div>
         </section>
+        <!-- TOURS SECTION -->
         <section class="section-tours">
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">
@@ -221,7 +240,7 @@
                 <a href="#" class="btn btn--green">Descubra todos os tours!</a>
             </div>
         </section>
-
+        <!-- STORIES SECTION -->
         <section class="section-stories">
             <div class="bg-video">
                 <video class="bg-video__content" autoplay muted loop>
@@ -289,7 +308,7 @@
                 <a href="#" class="btn-text">Ler todos &rarr;</a>
             </div>
         </section>
-
+        <!-- BOOK SECTION -->
         <section class="section-book">
             <div class="row">
                 <div class="book">
@@ -330,13 +349,29 @@
                 </div>
             </div>
         </section>
+        <!-- FOOTER SECTION -->
         <footer class="footer">
             <div class="footer__logo-box">
                 <img src="img/logo-green-2x.png" alt="Logo Inteira" class="footer__logo">
             </div>
             <div class="row">
-                <div class="col-1-of-2"></div>
-                <div class="col-1-of-2"></div>
+                <div class="col-1-of-2">
+                    <div class="footer__navigation">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a href="#" class="footer__link">Companhia</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Lista de Contato</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Carreiras</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Termo de privacidade</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Temos de uso</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-1-of-2">
+                    <p class="footer__copyright">
+                        Built by <a href="#" class="footer__link">Igor Pires</a> for Jonas Schmedtmann's online course <a href="#" class="footer__link">Advanced CSS and Sass</a>.
+                        Feel free to use this model, but not to claim it as yours. Allowed for personal and commercial usage. Copyright &copy; by Igor Pires.
+                    </p>
+                </div>
             </div>
         </footer>
     </main>
