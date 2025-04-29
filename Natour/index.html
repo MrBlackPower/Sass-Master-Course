@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -26,7 +26,7 @@
                 <span class="heading-primary--sub">É onde a vida acontece</span>
             </h1>
 
-            <a href="#" class="btn btn--white btn--animated">Descubra nossos pacotes!</a>
+            <a href="#section-tours" class="btn btn--white btn--animated">Descubra nossos pacotes!</a>
         </div>
     </header>
 
@@ -34,7 +34,9 @@
         <!-- NAVIGATION SECTION -->
          <div class="navigation">
             <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
-            <label for="navi-toggle" class="navigation__button">MENU</label>
+            <label for="navi-toggle" class="navigation__button">
+                <span class="navigation__icon"></span>
+            </label>
 
             <div class="navigation__background">&nbsp;</div>
 
@@ -49,7 +51,7 @@
             </nav>
          </div>
         <!-- ABOUT SECTION -->
-        <section class="section-about">
+        <section class="section-about" id="section-about">
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">
                     Os melhores passeios!
@@ -76,7 +78,7 @@
             </div>
         </section>
         <!-- FEATURES SECTION -->
-        <section class="section-features">
+        <section class="section-features" id="section-features">
             <i class="basic-world"></i>
 
             <div class="row">
@@ -126,7 +128,7 @@
             </div>
         </section>
         <!-- TOURS SECTION -->
-        <section class="section-tours">
+        <section class="section-tours" id="section-tours">
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">
                     Os passeios mais procurados do Vale do Café:
@@ -163,7 +165,7 @@
                                     <p class="card__price-only">Somente</p>
                                     <p class="card__price-value">$1.599,99</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Agende agora!</a>
+                                <a href="#popup" class="btn btn--white">Agende agora!</a>
                             </div>
                         </div>
                     </div>
@@ -196,7 +198,7 @@
                                     <p class="card__price-only">Somente</p>
                                     <p class="card__price-value">$999,99</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Agende agora!</a>
+                                <a href="#popup" class="btn btn--white">Agende agora!</a>
                             </div>
                         </div>
                     </div>
@@ -229,7 +231,7 @@
                                     <p class="card__price-only">Somente</p>
                                     <p class="card__price-value">$1.999,99</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Agende agora!</a>
+                                <a href="#popup" class="btn btn--white">Agende agora!</a>
                             </div>
                         </div>
                     </div>
@@ -241,7 +243,7 @@
             </div>
         </section>
         <!-- STORIES SECTION -->
-        <section class="section-stories">
+        <section class="section-stories" id="section-stories">
             <div class="bg-video">
                 <video class="bg-video__content" autoplay muted loop>
                     <source src="img/video.mp4" type="video/mp4">
@@ -309,7 +311,7 @@
             </div>
         </section>
         <!-- BOOK SECTION -->
-        <section class="section-book">
+        <section class="section-book" id="section-book">
             <div class="row">
                 <div class="book">
                     <form action="#" class="book__form">
@@ -350,7 +352,7 @@
             </div>
         </section>
         <!-- FOOTER SECTION -->
-        <footer class="footer">
+        <footer class="footer" id="footer">
             <div class="footer__logo-box">
                 <img src="img/logo-green-2x.png" alt="Logo Inteira" class="footer__logo">
             </div>
@@ -374,6 +376,26 @@
                 </div>
             </div>
         </footer>
+        <div class="popup" id="popup">
+            <div class="popup__content">
+                <div class="popup__left">
+                    <img src="img/nat-8.jpg" alt="Tour" class="popup__img">
+                    <img src="img/nat-9.jpg" alt="Tour" class="popup__img">
+                </div>
+                <div class="popup__right">
+                    <a href="#section-tours" class="popup__close">&times;</a>
+                    <h2 class="heading-secondary u-margin-bottom-medium">Comece o agendamento agora</h2>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Importante &ndash; Por favor leia os termos antes de agendar</h3>
+                    <p class="popup__text">
+                        Ao agendar um tour em Miguel Pereira, você concorda com os seguintes termos: 
+                        O clima no dia do tour pode variar e, em caso de condições climáticas adversas que resultem no cancelamento do tour, apenas 40% do valor pago será ressarcido. 
+                        Recomendamos verificar as condições climáticas antes de confirmar sua reserva. 
+                        Agradecemos sua compreensão e estamos à disposição para quaisquer dúvidas.
+                    </p>
+                    <a href="#" class="btn btn--green">Agendar agora</a>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- <section class="grid-test">

@@ -12,6 +12,8 @@
         right: 6rem;
         border-radius: 50%;
         text-align: center;
+        box-shadow: 0 1rem 3 rem rgba($color-black, 0.2);
+        cursor: pointer;
 
         z-index: 2000;
     }
@@ -25,6 +27,7 @@
         top: 6.5rem;
         right: 6.5rem;
         background-image: radial-gradient($color-primary-light,$color-primary-dark);
+        transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
 
         z-index: 1000;
     }
@@ -34,14 +37,18 @@
         width: 100%;
         position: fixed;
         top: 0;
-        right: 0;
+        left: 0;
 
         z-index: 1500;
+
+        width: 0;
+        opacity: 0;
+        transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
     }
 
     &__list {
         @include center-fix;
-
+        width: 100%;
         list-style: none;
         text-align: center;
     }
@@ -76,6 +83,71 @@
             color: $color-primary;
             transform: translateX(1rem);
             background-position: 100%;
+        }
+    }
+
+
+    /* Animation for the checkbox to make it look like a button */
+    &__checkbox:checked ~ &__background {
+        transform: scale(80);
+    }
+
+    &__checkbox:checked ~ &__nav {
+        opacity: 1;
+        width: 100%;
+    }
+
+    /* Animation for the button to make it look like a cross */
+    &__icon {
+        position: relative;
+        margin-top: 3.5rem;
+
+        &,
+        &:before,
+        &:after {
+            width: 3rem;
+            height: 2px;
+            background-color: $color-gray-darker;
+            display: inline-block;
+        }
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            transition: all 0.2s;
+        }
+
+        &::before {
+            top: -.8rem;
+        }
+
+        &::after {
+            top: .8rem;
+        }
+    }
+
+    &__button:hover &__icon::before {
+        top: -1rem;
+    }
+
+    &__button:hover &__icon::after {
+        top: 1rem;
+    }
+
+    &__checkbox:checked + &__button &__icon {
+        background-color: transparent;
+        top: 0.75rem;
+
+        &::after {
+            transform: rotate(135deg);
+            top: -0.75rem;
+        }
+
+        &::before {
+            transform: rotate(-135deg);
+            top: -0.75rem;
         }
     }
 }
