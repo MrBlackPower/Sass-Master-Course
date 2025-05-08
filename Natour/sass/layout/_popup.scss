@@ -27,6 +27,12 @@
     &__left {
         width: 33.33333333%;
         display: table-cell;
+
+        @include respond(large-desktop) {
+            width: 100%;
+            display: table-row;
+            height: 20vh;
+        }
     }
 
     &__right {
@@ -34,12 +40,28 @@
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
+
+        @include respond(large-desktop) {
+            width: 100%;
+        }
     }
 
     &__img {
         display: block;
         width: 100%;
         height: 100%;
+
+        @include respond(large-desktop) {
+            display: inline-flex;
+            height: 20rem;
+            width: 50%;
+            padding: 0;
+            margin: 0;
+        }
+
+        @include respond(phone) {
+            height: 15rem;
+        }
     }
 
     &__text {
@@ -53,6 +75,11 @@
         -moz-column-count: 2;
         -moz-column-gap: 4rem;
         -moz-column-rule: 1px solid $color-gray;
+
+        @include respond(tablet) {
+            column-count: 1;
+            -moz-column-count: 1;
+        }
 
         -moz-hyphens: auto;
         -ms-hyphens: auto;

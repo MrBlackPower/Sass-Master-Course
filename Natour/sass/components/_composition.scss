@@ -9,20 +9,49 @@
         z-index: 10;
         transition: all .2s;
         outline-offset: 2rem;
+
+        @include respond(tablet) {
+            float: left;
+            position: relative;
+            width: 33.3333333%;
+            box-shadow: 0 1.5rem 3rem rgba($color-black, .2);
+        }
         
         &--p1{
-            left: 10%;
+            left: 0;
             top: -2rem;
+
+            @include respond(tablet) {
+                top: 1rem;
+                left: 3rem;
+                border-radius: 10%;
+                overflow: hidden;
+            }
         }
 
         &--p2{
-            right: 20%;
+            right: 0;
             top: 2rem;
+
+            @include respond(tablet) {
+                top: 2rem;
+                right: -3rem;
+                transform: rotate(-5deg);
+                border-radius: 10%;
+                overflow: hidden;
+            }
         }
 
         &--p3{
-            left: 25%;
+            left: 50%;
             top: 7rem;
+
+            @include respond(tablet) {
+                top: 0;
+                left: 7.5%;
+                border-radius: 10%;
+                overflow: hidden;
+            }
         }
 
         &:hover {

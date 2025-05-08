@@ -5,10 +5,20 @@
     background-color: rgba($color-white, 0.6);
     border-radius: $border-radius-small;
     padding: 6rem;
-    padding-left: 9REM;
+    padding-left: 9rem;
     font-size: $default-font-size;
     transform: skewX(-12deg);
     
+    @include respond(tablet) {
+        width: 100%;
+        padding: 4rem;
+        padding-left: 7rem;
+    }
+
+    @include respond(phone) {
+        transform: skewX(0deg);
+    }
+
     &__shape {
         width: 15rem;
         height: 15rem;
@@ -20,6 +30,10 @@
         transform: translate(-3rem, -25%) skew(12deg);
 
         position: relative;
+        
+        @include respond(phone) {
+            transform: skewX(0deg);
+        }
     }
 
     &__img{
@@ -30,6 +44,11 @@
 
     &__text {
         transform: skewX(12deg);
+
+        
+        @include respond(phone) {
+            transform: skewX(0deg);
+        }
     }
 
     &__caption {
@@ -44,11 +63,21 @@
         opacity: 0;
         transition: all 0.5s;
         backface-visibility: visible;
+
+        
+        @include respond(phone) {
+            transform: skewX(0deg);
+        }
     }
 
     &:hover &__caption {
         opacity: 1;
         transform: translate(-50%, -50%) skewX(-12deg);
+
+        
+        @include respond(phone) {
+            transform: skewX(0deg);
+        }
     }
     &:hover &__img {
         transform: translate(-17.5%) scale(1);

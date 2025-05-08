@@ -3,18 +3,35 @@
     // background-color:$color-white;
     margin: 0 auto;
 
+    @include respond(tablet) {
+        max-width: 50rem;
+        padding: 0 3rem;
+    }
+
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
+        
+        @include respond(tablet) {
+            margin-bottom: $gutter-vertical-small;
+        }
     }
 
     @include clearfix;
 
     [class^="col-"] {
         float: left;
-        padding-left: 8rem;
 
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
+        
+            @include respond(tablet) {
+                margin-right: 0;
+                margin-bottom: $gutter-vertical-small;
+            }
+        }
+        
+        @include respond(tablet) {
+            width: 100% !important;
         }
     }
 

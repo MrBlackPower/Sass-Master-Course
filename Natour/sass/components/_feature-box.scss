@@ -8,6 +8,10 @@
     transition: transform .3s;
     height: 36rem;
 
+    @include respond(phone) {
+        margin-bottom: 0px;
+    }
+
     &__icon {
         font-size: 6rem;
         margin-bottom: .5rem;
