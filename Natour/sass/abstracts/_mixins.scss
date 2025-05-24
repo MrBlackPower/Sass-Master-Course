@@ -29,15 +29,15 @@
 // @mixin respond($breakpoint, $content) {
 @mixin respond($breakpoint) {
     @if $breakpoint == phone {
-        @media (max-width: 37.5em) { @content; } //600px
+        @media only screen and (max-width: 37.5em) { @content; } //600px
     } @else if $breakpoint == tablet {
-        @media (max-width: 56.25em) { @content; } //900px
+        @media only screen and (max-width: 56.25em) { @content; } //900px
     } @else if $breakpoint == desktop {
-        @media (max-width: 75em) { @content; } //1200px
+        @media only screen and (max-width: 75em) { @content; } //1200px
     } @else if $breakpoint == large-desktop {
-        @media (max-width: 93.75em) { @content; } //1500px
+        @media only screen and (max-width: 93.75em) { @content; } //1500px
     } @else if $breakpoint == xlarge-desktop {
-        @media (max-width: 112.5em) { @content; } //1800px
+        @media only screen and (max-width: 112.5em) { @content; } //1800px
     } else {
         @warn "No matching media query for #{$breakpoint}.";
     }
